@@ -33,12 +33,14 @@
         // The user typed 0, or something that's not a number, so clear the field
         sender.text = nil;
     }
+    
 }
 
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
-
+    
+    
     
     int numberOfBeers = self.beerCountSlider.value;
     int ouncesInOneBeerGlass = 12;  //assume they are 12oz beer bottles
@@ -55,9 +57,9 @@
     float ouncesOfAlcoholPerWineGlass = ouncesInOneWineGlass * alcoholPercentageOfWine;
     float numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass;
     
-        NSString *NavViewTitle  = [NSString stringWithFormat:NSLocalizedString(@"Wine ( %.0f glasses)" , nil), numberOfWineGlassesForEquivalentAlcoholAmount];
     
-    self.navigationItem.title = NavViewTitle ;
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%.1f" ,  numberOfWineGlassesForEquivalentAlcoholAmount]];
+    
     NSLog(@"Number of wine glasses is : %.0f", numberOfWineGlassesForEquivalentAlcoholAmount );
     
     

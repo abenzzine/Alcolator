@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iJL-g4-2hp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4gN-UR-f7U">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -20,6 +20,9 @@
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="38R-ia-bmD">
                                 <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="21" y="110" width="348" height="31"/>
+                                </variation>
                                 <connections>
                                     <action selector="sliderValueDidChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Kmo-vT-BZ5"/>
                                 </connections>
@@ -27,7 +30,10 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Alcohol Content Per Beer" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Lf-Be-Y6R">
                                 <rect key="frame" x="228" y="28" width="121" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="23" y="72" width="344" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="textFieldDidChange:" destination="vXZ-lx-hvc" eventType="editingChanged" id="T9N-8z-GoL"/>
                                 </connections>
@@ -39,6 +45,9 @@
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="131" y="148" width="140" height="45"/>
+                                </variation>
                                 <connections>
                                     <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kaO-Oj-URa"/>
                                 </connections>
@@ -48,6 +57,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="289" width="344" height="21"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -81,11 +93,9 @@
                                 <exclude reference="5ky-ky-CJb"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="E8S-hM-N4N"/>
-                                <exclude reference="Eu5-pC-8I5"/>
-                                <exclude reference="IZY-B0-i0g"/>
-                                <exclude reference="akd-3A-xLS"/>
-                                <exclude reference="vNG-cy-cL4"/>
+                                <exclude reference="3dv-fa-BfT"/>
+                                <exclude reference="hbt-gL-Unw"/>
+                                <exclude reference="l2x-iQ-oEU"/>
                                 <exclude reference="XGE-ZT-DDG"/>
                                 <exclude reference="fVy-Dw-Qbu"/>
                                 <exclude reference="mli-uL-AjX"/>
@@ -94,9 +104,11 @@
                                 <exclude reference="30y-uj-ka8"/>
                                 <exclude reference="L7W-ur-nBI"/>
                                 <exclude reference="Via-87-zKB"/>
-                                <exclude reference="3dv-fa-BfT"/>
-                                <exclude reference="hbt-gL-Unw"/>
-                                <exclude reference="l2x-iQ-oEU"/>
+                                <exclude reference="E8S-hM-N4N"/>
+                                <exclude reference="Eu5-pC-8I5"/>
+                                <exclude reference="IZY-B0-i0g"/>
+                                <exclude reference="akd-3A-xLS"/>
+                                <exclude reference="vNG-cy-cL4"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -106,11 +118,9 @@
                                 <include reference="5ky-ky-CJb"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="E8S-hM-N4N"/>
-                                <exclude reference="Eu5-pC-8I5"/>
-                                <include reference="IZY-B0-i0g"/>
-                                <exclude reference="akd-3A-xLS"/>
-                                <include reference="vNG-cy-cL4"/>
+                                <include reference="3dv-fa-BfT"/>
+                                <include reference="hbt-gL-Unw"/>
+                                <include reference="l2x-iQ-oEU"/>
                                 <include reference="XGE-ZT-DDG"/>
                                 <include reference="fVy-Dw-Qbu"/>
                                 <include reference="mli-uL-AjX"/>
@@ -119,15 +129,18 @@
                                 <include reference="30y-uj-ka8"/>
                                 <include reference="L7W-ur-nBI"/>
                                 <exclude reference="Via-87-zKB"/>
-                                <include reference="3dv-fa-BfT"/>
-                                <include reference="hbt-gL-Unw"/>
-                                <include reference="l2x-iQ-oEU"/>
+                                <include reference="E8S-hM-N4N"/>
+                                <exclude reference="Eu5-pC-8I5"/>
+                                <include reference="IZY-B0-i0g"/>
+                                <exclude reference="akd-3A-xLS"/>
+                                <include reference="vNG-cy-cL4"/>
                             </mask>
                         </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Czl-1u-r6X" appends="YES" id="07n-Ts-tfE"/>
                         </connections>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Wine" image="wine" id="PrF-wG-AUo"/>
                     <connections>
                         <outlet property="beerCountSlider" destination="38R-ia-bmD" id="9VA-hd-oY3"/>
                         <outlet property="beerPercentTextField" destination="6Lf-Be-Y6R" id="iZh-fL-9dh"/>
@@ -141,89 +154,26 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1383" y="452"/>
+            <point key="canvasLocation" x="237" y="240"/>
         </scene>
-        <!--Main Menu View Controller-->
-        <scene sceneID="q5z-gC-jkX">
+        <!--Tab Bar Controller-->
+        <scene sceneID="olE-Yp-ehA">
             <objects>
-                <viewController id="pPA-Uh-ek8" customClass="MainMenuViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fwH-1s-EAV"/>
-                        <viewControllerLayoutGuide type="bottom" id="phC-dh-tdD"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Joy-7g-hMj">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avG-Ow-E5O">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="50"/>
-                                <state key="normal" title="Wine">
-                                    <color key="titleColor" red="0.87705176767676774" green="0.27831971988179838" blue="0.54468712619706849" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="SrV-rN-pPt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rn1-aX-xDt">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="50"/>
-                                <state key="normal" title="Whiskey">
-                                    <color key="titleColor" red="0.66816603535353536" green="0.53060584458186255" blue="0.18702704952979093" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="eFK-0V-FHn" kind="show" id="EKe-mL-gw7"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="avG-Ow-E5O" firstAttribute="top" secondItem="fwH-1s-EAV" secondAttribute="bottom" constant="57" id="1pG-4b-JGo">
-                                <variation key="widthClass=compact" constant="40"/>
-                            </constraint>
-                            <constraint firstItem="rn1-aX-xDt" firstAttribute="top" secondItem="avG-Ow-E5O" secondAttribute="bottom" constant="20" id="MdM-3G-BiX">
-                                <variation key="widthClass=compact" constant="40"/>
-                            </constraint>
-                            <constraint firstItem="avG-Ow-E5O" firstAttribute="centerX" secondItem="rn1-aX-xDt" secondAttribute="centerX" constant="0.5" id="SI3-cV-Lqh">
-                                <variation key="widthClass=compact" constant="0.0"/>
-                            </constraint>
-                            <constraint firstAttribute="centerX" secondItem="avG-Ow-E5O" secondAttribute="centerX" constant="-0.5" id="d27-AF-K7A">
-                                <variation key="widthClass=compact" constant="0.0"/>
-                            </constraint>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="avG-Ow-E5O"/>
-                                <exclude reference="rn1-aX-xDt"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="1pG-4b-JGo"/>
-                                <exclude reference="SI3-cV-Lqh"/>
-                                <exclude reference="d27-AF-K7A"/>
-                                <exclude reference="MdM-3G-BiX"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="avG-Ow-E5O"/>
-                                <include reference="rn1-aX-xDt"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="1pG-4b-JGo"/>
-                                <include reference="SI3-cV-Lqh"/>
-                                <include reference="d27-AF-K7A"/>
-                                <include reference="MdM-3G-BiX"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <navigationItem key="navigationItem" id="9RW-1d-3l6">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="4Fo-GT-1cs"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Egy-gG-RjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController id="4gN-UR-f7U" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="gN5-iA-KZq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="dvr-iJ-rxx"/>
+                        <segue destination="eFK-0V-FHn" kind="relationship" relationship="viewControllers" id="fj9-zX-hGA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Pb-w0-2eg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3" y="452"/>
+            <point key="canvasLocation" x="-919.5" y="318"/>
         </scene>
         <!--Whiskey-->
         <scene sceneID="05O-Yx-641">
@@ -240,6 +190,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="PCx-hs-fMG">
                                 <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
                                 <gestureRecognizers/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="21" y="110" width="372" height="31"/>
+                                </variation>
                                 <connections>
                                     <action selector="sliderValueDidChange:" destination="eFK-0V-FHn" eventType="valueChanged" id="D7u-4U-xc7"/>
                                 </connections>
@@ -251,6 +204,9 @@
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="144" y="148" width="113" height="45"/>
+                                </variation>
                                 <connections>
                                     <action selector="buttonPressed:" destination="eFK-0V-FHn" eventType="touchUpInside" id="MfB-NU-sV3"/>
                                 </connections>
@@ -260,12 +216,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="23" y="285" width="344" height="21"/>
+                                </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Alcohol Content Per Beer" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u7k-oM-AuS">
                                 <rect key="frame" x="228" y="28" width="121" height="30"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="72" width="368" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="textFieldDidChange:" destination="eFK-0V-FHn" eventType="editingChanged" id="SQ5-p9-VRB"/>
                                 </connections>
@@ -337,6 +299,7 @@
                             <outletCollection property="gestureRecognizers" destination="9QC-uO-5Ua" appends="YES" id="Ucd-hF-paa"/>
                         </connections>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Whiskey" image="whiskey" id="kdW-Bz-FnW"/>
                     <connections>
                         <outlet property="beerCountSlider" destination="PCx-hs-fMG" id="rlM-3G-PuB"/>
                         <outlet property="beerPercentTextField" destination="u7k-oM-AuS" id="WVi-H6-3uy"/>
@@ -350,25 +313,11 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="682.5" y="452"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ayX-x1-1s6">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iJL-g4-2hp" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hdD-3c-rbi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="pPA-Uh-ek8" kind="relationship" relationship="rootViewController" id="MJ1-3c-sva"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nv6-z1-SUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-721.5" y="452"/>
+            <point key="canvasLocation" x="6" y="731"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="whiskey" width="25" height="25"/>
+        <image name="wine" width="25" height="25"/>
+    </resources>
 </document>

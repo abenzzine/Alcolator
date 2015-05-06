@@ -31,8 +31,7 @@
     float ouncesOfAlcoholPerWhiskeyGlass = ouncesInOneWhiskeyGlass * alcoholPercentageOfWhiskey;
     float numberOfWhiskeyGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWhiskeyGlass;
     
-    NSString *NavViewTitle1  = [NSString stringWithFormat:NSLocalizedString(@"Whiskey ( %.0f shots)" , nil), numberOfWhiskeyGlassesForEquivalentAlcoholAmount];
-    self.navigationItem.title = NavViewTitle1 ;
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%.1f" , numberOfWhiskeyGlassesForEquivalentAlcoholAmount]];
     NSLog(@"Number of whiskey shots is : %.0f", numberOfWhiskeyGlassesForEquivalentAlcoholAmount );
     
 }
