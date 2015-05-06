@@ -10,12 +10,9 @@
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet UITextField *beerPercentTextField;
-@property (weak, nonatomic) IBOutlet UISlider *beerCountSlider;
-@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+
 
 @end
-
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -36,11 +33,37 @@
         // The user typed 0, or something that's not a number, so clear the field
         sender.text = nil;
     }
+    
 }
 
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
+    
+    
+    
+    int numberOfBeers = self.beerCountSlider.value;
+    int ouncesInOneBeerGlass = 12;  //assume they are 12oz beer bottles
+    
+    float alcoholPercentageOfBeer = [self.beerPercentTextField.text floatValue] / 100;
+    float ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass * alcoholPercentageOfBeer;
+    float ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfBeers;
+    
+    // now, calculate the equivalent amount of wine...
+    
+    float ouncesInOneWineGlass = 5;  // wine glasses are usually 5oz
+    float alcoholPercentageOfWine = 0.13;  // 13% is average
+    
+    float ouncesOfAlcoholPerWineGlass = ouncesInOneWineGlass * alcoholPercentageOfWine;
+    float numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass;
+    
+    
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%.1f" ,  numberOfWineGlassesForEquivalentAlcoholAmount]];
+    
+    NSLog(@"Number of wine glasses is : %.0f", numberOfWineGlassesForEquivalentAlcoholAmount );
+    
+    
+
 }
 
 - (IBAction)buttonPressed:(UIButton *)sender {
@@ -62,6 +85,8 @@
     
     float ouncesOfAlcoholPerWineGlass = ouncesInOneWineGlass * alcoholPercentageOfWine;
     float numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass;
+    
+    //NSLog(@"Number of wine glasses is : %f", numberOfWineGlassesForEquivalentAlcoholAmount );
     
     // decide whether to use "beer"/"beers" and "glass"/"glasses"
     
