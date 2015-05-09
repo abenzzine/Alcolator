@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eFK-0V-FHn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -23,7 +24,7 @@
                                     <action selector="sliderValueDidChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Kmo-vT-BZ5"/>
                                 </connections>
                             </slider>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Alcohol Content Per Beer" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Lf-Be-Y6R">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Alcohol Content Per Beer" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Lf-Be-Y6R">
                                 <rect key="frame" x="228" y="28" width="121" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -42,7 +43,7 @@
                                     <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kaO-Oj-URa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ky-ky-CJb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ky-ky-CJb">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -76,18 +77,18 @@
                                 <exclude reference="5ky-ky-CJb"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Eu5-pC-8I5"/>
-                                <exclude reference="FTW-Nc-X1x"/>
-                                <exclude reference="akd-3A-xLS"/>
+                                <exclude reference="35g-mY-2M7"/>
+                                <exclude reference="Hvv-K8-LHF"/>
+                                <exclude reference="hrz-ha-PNr"/>
                                 <exclude reference="aZ0-Ha-s5N"/>
                                 <exclude reference="kdJ-a5-9Nu"/>
                                 <exclude reference="keF-Fw-ieL"/>
                                 <exclude reference="D3Y-u2-NLc"/>
                                 <exclude reference="It1-7g-Ghi"/>
                                 <exclude reference="Via-87-zKB"/>
-                                <exclude reference="35g-mY-2M7"/>
-                                <exclude reference="Hvv-K8-LHF"/>
-                                <exclude reference="hrz-ha-PNr"/>
+                                <exclude reference="Eu5-pC-8I5"/>
+                                <exclude reference="FTW-Nc-X1x"/>
+                                <exclude reference="akd-3A-xLS"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -97,18 +98,18 @@
                                 <include reference="5ky-ky-CJb"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Eu5-pC-8I5"/>
-                                <include reference="FTW-Nc-X1x"/>
-                                <include reference="akd-3A-xLS"/>
+                                <include reference="35g-mY-2M7"/>
+                                <include reference="Hvv-K8-LHF"/>
+                                <include reference="hrz-ha-PNr"/>
                                 <include reference="aZ0-Ha-s5N"/>
                                 <include reference="kdJ-a5-9Nu"/>
                                 <include reference="keF-Fw-ieL"/>
                                 <include reference="D3Y-u2-NLc"/>
                                 <include reference="It1-7g-Ghi"/>
                                 <exclude reference="Via-87-zKB"/>
-                                <include reference="35g-mY-2M7"/>
-                                <include reference="Hvv-K8-LHF"/>
-                                <include reference="hrz-ha-PNr"/>
+                                <include reference="Eu5-pC-8I5"/>
+                                <include reference="FTW-Nc-X1x"/>
+                                <include reference="akd-3A-xLS"/>
                             </mask>
                         </variation>
                         <connections>
@@ -118,6 +119,7 @@
                     <connections>
                         <outlet property="beerCountSlider" destination="38R-ia-bmD" id="9VA-hd-oY3"/>
                         <outlet property="beerPercentTextField" destination="6Lf-Be-Y6R" id="iZh-fL-9dh"/>
+                        <outlet property="resultLabel" destination="5ky-ky-CJb" id="YVn-fs-wVO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -127,7 +129,140 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="438" y="429"/>
+            <point key="canvasLocation" x="810" y="452"/>
+        </scene>
+        <!--Whiskey View Controller-->
+        <scene sceneID="05O-Yx-641">
+            <objects>
+                <viewController id="eFK-0V-FHn" customClass="WhiskeyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j2R-s2-ODU"/>
+                        <viewControllerLayoutGuide type="bottom" id="MvC-yN-x3R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ojn-gY-DSU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="PCx-hs-fMG">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <action selector="sliderValueDidChange:" destination="eFK-0V-FHn" eventType="valueChanged" id="D7u-4U-xc7"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOP-jF-GZ0">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="144" y="104" width="113" height="45"/>
+                                </variation>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="eFK-0V-FHn" eventType="touchUpInside" id="MfB-NU-sV3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJx-UD-w2G">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="23" y="241" width="344" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Alcohol Content Per Beer" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u7k-oM-AuS">
+                                <rect key="frame" x="228" y="28" width="121" height="30"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDidChange:" destination="eFK-0V-FHn" eventType="editingChanged" id="SQ5-p9-VRB"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="PCx-hs-fMG" firstAttribute="centerX" secondItem="u7k-oM-AuS" secondAttribute="centerX" constant="7" id="1PI-fB-jwK"/>
+                            <constraint firstItem="PCx-hs-fMG" firstAttribute="top" secondItem="u7k-oM-AuS" secondAttribute="bottom" constant="8" id="3Yh-Iw-P0l"/>
+                            <constraint firstItem="u7k-oM-AuS" firstAttribute="leading" secondItem="Ojn-gY-DSU" secondAttribute="leadingMargin" id="BHM-9m-Y4v"/>
+                            <constraint firstItem="WOP-jF-GZ0" firstAttribute="top" secondItem="PCx-hs-fMG" secondAttribute="bottom" constant="52" id="CeB-vv-uuF">
+                                <variation key="widthClass=compact" constant="8"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="oJx-UD-w2G" secondAttribute="trailing" constant="17" id="DBL-BP-Foa"/>
+                            <constraint firstItem="WOP-jF-GZ0" firstAttribute="centerX" secondItem="PCx-hs-fMG" secondAttribute="centerX" constant="0.5" id="KjO-iU-N0d">
+                                <variation key="widthClass=compact" constant="-6.5"/>
+                            </constraint>
+                            <constraint firstItem="PCx-hs-fMG" firstAttribute="width" secondItem="u7k-oM-AuS" secondAttribute="width" id="WEv-Fl-yN7"/>
+                            <constraint firstItem="u7k-oM-AuS" firstAttribute="trailing" secondItem="Ojn-gY-DSU" secondAttribute="trailingMargin" id="cY0-xj-NpB"/>
+                            <constraint firstItem="u7k-oM-AuS" firstAttribute="top" secondItem="j2R-s2-ODU" secondAttribute="bottom" constant="8" id="gkS-CA-5cw"/>
+                            <constraint firstItem="WOP-jF-GZ0" firstAttribute="centerY" secondItem="PCx-hs-fMG" secondAttribute="centerY" constant="89.5" id="hzS-dt-Bxm"/>
+                            <constraint firstItem="oJx-UD-w2G" firstAttribute="top" secondItem="WOP-jF-GZ0" secondAttribute="bottom" constant="92" id="j3w-cA-SlB"/>
+                            <constraint firstItem="oJx-UD-w2G" firstAttribute="leading" secondItem="Ojn-gY-DSU" secondAttribute="leadingMargin" constant="7" id="l6R-TZ-3yW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="PCx-hs-fMG"/>
+                                <exclude reference="WOP-jF-GZ0"/>
+                                <exclude reference="oJx-UD-w2G"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="DBL-BP-Foa"/>
+                                <exclude reference="l6R-TZ-3yW"/>
+                                <exclude reference="j3w-cA-SlB"/>
+                                <exclude reference="3Yh-Iw-P0l"/>
+                                <exclude reference="1PI-fB-jwK"/>
+                                <exclude reference="WEv-Fl-yN7"/>
+                                <exclude reference="CeB-vv-uuF"/>
+                                <exclude reference="KjO-iU-N0d"/>
+                                <exclude reference="hzS-dt-Bxm"/>
+                                <exclude reference="cY0-xj-NpB"/>
+                                <exclude reference="gkS-CA-5cw"/>
+                                <exclude reference="BHM-9m-Y4v"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="PCx-hs-fMG"/>
+                                <include reference="WOP-jF-GZ0"/>
+                                <include reference="oJx-UD-w2G"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="DBL-BP-Foa"/>
+                                <include reference="l6R-TZ-3yW"/>
+                                <include reference="j3w-cA-SlB"/>
+                                <include reference="3Yh-Iw-P0l"/>
+                                <include reference="1PI-fB-jwK"/>
+                                <include reference="WEv-Fl-yN7"/>
+                                <include reference="CeB-vv-uuF"/>
+                                <include reference="KjO-iU-N0d"/>
+                                <exclude reference="hzS-dt-Bxm"/>
+                                <include reference="cY0-xj-NpB"/>
+                                <include reference="gkS-CA-5cw"/>
+                                <include reference="BHM-9m-Y4v"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="9QC-uO-5Ua" appends="YES" id="Ucd-hF-paa"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="beerCountSlider" destination="PCx-hs-fMG" id="rlM-3G-PuB"/>
+                        <outlet property="beerPercentTextField" destination="u7k-oM-AuS" id="WVi-H6-3uy"/>
+                        <outlet property="resultLabel" destination="oJx-UD-w2G" id="nF0-LX-ObW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j1Z-t3-elr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9QC-uO-5Ua">
+                    <connections>
+                        <action selector="tapGestureDidFire:" destination="eFK-0V-FHn" id="tmb-rf-fB4"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-90" y="452"/>
         </scene>
     </scenes>
 </document>
